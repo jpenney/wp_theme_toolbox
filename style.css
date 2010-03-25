@@ -1,0 +1,227 @@
+/*
+Theme Name: Toolbox
+Theme URI: 
+Description: A handy little theme that helps you build bigger ones
+Author: Automattic
+Version: 0.1
+Tags: 
+*/
+
+#wrapper {
+	margin: 1em;
+}
+#container {
+	float: left;
+	margin: 0 -240px 0 0;
+	width: 100%;
+}
+#content {
+	margin: 0 280px 0 0;
+}
+#sidebar {
+	float: right;
+	overflow: hidden;
+	width: 220px;
+}
+#footer {
+	clear: both;
+	width: 100%;
+}
+
+/* Increase the size of the content area for the "One column, no sidebar" template  */
+
+.attachment #content,
+.onecolumn #content {
+	margin: 0;
+}
+
+/* Text meant only for screen readers */
+
+.screen-reader-text {
+	position: absolute;
+	left: -9000em;
+}
+
+/* Class for labelling required form items */
+
+.required {
+	color: #CC0033;
+}
+
+
+/* =Header
+-------------------------------------------------------------- */
+
+#site-title {
+	font-size: 2em;
+	font-weight: bold;
+	margin: .67em 0;
+}
+#site-description {
+	font-size: 1em;
+	font-weight: normal;
+	margin: 0 0 1em 0;
+}
+
+
+/* =Menu
+-------------------------------------------------------------- */
+
+#access {
+	background: #eee;
+	display: block;
+	float:left;
+	margin: 0 auto 1em auto;
+	width: 100%;
+}
+#access .menu-header {
+	margin-left: 1em;
+}
+#access .menu-header ul {
+	list-style: none;
+	margin: 0;
+	padding-left: 0;
+}
+#access .menu-header li {
+	float:left;
+	position: relative;
+}
+#access a {
+	display: block;
+	line-height: 2em;
+	padding: 0 1em;
+	text-decoration: none;
+}
+#access ul ul {
+	display: none;
+	position: absolute;
+	top: 2em;
+	left: 0;
+	float: left;
+	-webkit-box-shadow: 0px 3px 3px rgba(0,0,0,0.2);
+	-moz-box-shadow: 0px 3px 3px rgba(0,0,0,0.2);
+	box-shadow: 0px 3px 3px rgba(0,0,0,0.2);
+	z-index: 99999;
+}
+#access ul ul ul {
+	left: 100%;
+	top: 0;
+}
+#access ul ul a {
+	background: #333;
+	color: #fff;
+	height: auto;
+	line-height: 1em;
+	padding: .5em .5em .5em 1em;
+	width: 10em;
+}
+#access li:hover > a,
+#access ul ul :hover > a {
+	background: #333;
+	color: #fff;
+}
+#access ul li:hover > ul {
+	display:block;
+}
+
+
+/* =Content
+-------------------------------------------------------------- */
+
+.entry-title {
+	font-size: 1.5em;
+	margin: .83em 0;	
+}
+.page-link {
+	margin: 0 0 1em 0;
+}
+
+/* Form Elements */
+
+.hentry input[type=text] {
+	margin: 0 1em 0 0;
+	width: 60%;
+}
+.hentry textarea {
+	width: 80%;
+}
+
+
+/* =Navigation
+-------------------------------------------------------------- */
+
+.navigation {
+	overflow: hidden;
+}
+.nav-previous {
+	float: left;
+	width: 50%;
+}
+.nav-next {
+	float: right;
+	text-align: right;
+	width: 50%;
+}
+#nav-above {
+	display: none;
+}
+.paged #nav-above,
+.single #nav-above {
+	display: block;
+}
+#nav-below {
+	margin: 1em 0 0 0;
+}
+
+
+/* =Comments
+-------------------------------------------------------------- */
+
+#respond input[type=text] {
+	float: left;
+	margin: 0 1em 0 0;
+	width: 60%;
+}
+#respond textarea {
+	margin: 0 1em 1em 0;
+	float: left;
+	width: 80%;
+}
+#respond .form-allowed-tags {
+	clear: both;
+}
+#respond .form-allowed-tags dd {
+	margin: 0;
+}
+
+
+/* =Widgets
+-------------------------------------------------------------- */
+
+.widget-area {
+	background: pink;
+}
+.widget-area ul {
+	list-style: none;
+	padding: 0 1em;
+}
+.widget-area ul ul {
+	list-style: disc;
+	padding: 0 0 0 1em;
+}
+
+.widget-area .widget_search label {
+	display: none;
+}
+.widget-area .widget_search input#s {
+	width: 60%;
+}
+
+
+/* =Footer
+-------------------------------------------------------------- */
+
+#footer {
+	padding: 1em 0 0 0;
+}
+
