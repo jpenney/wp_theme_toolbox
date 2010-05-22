@@ -1,3 +1,10 @@
+<?php
+/**
+ * @package WordPress
+ * @subpackage Toolbox
+ */
+?>
+
 <?php get_header(); ?>
 
 		<div id="container">
@@ -17,7 +24,7 @@
 
 <?php rewind_posts(); ?>
 
-<?php get_generic_template( 'loop', 'archive' ); ?>
+<?php get_template_part( 'loop', 'archive' ); ?>
 
 			</div><!-- #content -->
 		</div><!-- #container -->

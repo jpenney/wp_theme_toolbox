@@ -2,8 +2,8 @@
 Theme Name: Toolbox
 Theme URI: 
 Description: A handy little theme that helps you build bigger ones
-Author: Automattic
-Version: 0.1-wpcom
+Author: The Automattic Theme Team
+Version: 0.2
 Tags: 
 */
 
@@ -18,7 +18,7 @@ Tags:
 #content {
 	margin: 0 280px 0 0;
 }
-#sidebar {
+#main .widget-area {
 	float: right;
 	overflow: hidden;
 	width: 220px;
@@ -28,10 +28,10 @@ Tags:
 	width: 100%;
 }
 
-/* Increase the size of the content area for the "One column, no sidebar" template  */
+/* Increase the size of the content area for templates without sidebars  */
 
-.attachment #content,
-.onecolumn #content {
+#main .image-attachment,
+.error404 #content {
 	margin: 0;
 }
 
@@ -74,15 +74,12 @@ Tags:
 	margin: 0 auto 1em auto;
 	width: 100%;
 }
-#access .menu-header {
-	margin-left: 1em;
-}
-#access .menu-header ul {
+#access ul {
 	list-style: none;
 	margin: 0;
 	padding-left: 0;
 }
-#access .menu-header li {
+#access li {
 	float:left;
 	position: relative;
 }
@@ -136,13 +133,76 @@ Tags:
 	margin: 0 0 1em 0;
 }
 
-/* Form Elements */
+/* 404 page */
 
-.hentry input[type=text] {
+.error404 .widget {
+	float: left;
+	width: 33%;
+}
+.error404 .widget .widgettitle,
+.error404 .widget ul {
+	margin-right: 1em;
+}
+.error404 .widget_tag_cloud {
+	clear: both;
+	float: none;
+	width: 100%;
+}
+
+/* Notices */
+
+.post .notice,
+.error404 #searchform {
+	background: #EEE;
+	display: block;
+	padding: 1em;
+}
+
+/* Image Attachments */
+
+.image-attachment .entry-meta {
+	float: left;
+}
+.image-attachment .image-navigation {
+	float: right;
+	margin: 0 0 1em 0;
+}
+.image-attachment .entry-content {
+	clear: both;
+}
+.image-attachment .entry-content .entry-attachment {
+	background: #EEE;
+	padding: 1em;
+}
+.image-attachment .entry-content .attachment {
+	display: block;
+	margin: 0 auto;
+	text-align: center;
+}
+
+
+/* =Images
+-------------------------------------------------------------- */
+
+a img {
+	border: none;
+}
+
+
+/* =Forms
+-------------------------------------------------------------- */
+
+#searchform label {
+	display: none;
+}
+#searchform input#s {
+	width: 60%;
+}
+input[type=text] {
 	margin: 0 1em 0 0;
 	width: 60%;
 }
-.hentry textarea {
+textarea {
 	width: 80%;
 }
 
@@ -153,11 +213,11 @@ Tags:
 .navigation {
 	overflow: hidden;
 }
-.nav-previous {
+.navigation .nav-previous {
 	float: left;
 	width: 50%;
 }
-.nav-next {
+.navigation .nav-next {
 	float: right;
 	text-align: right;
 	width: 50%;
@@ -182,6 +242,9 @@ Tags:
 	margin: 0 1em 0 0;
 	width: 60%;
 }
+#respond .comment-form-comment label {
+	display: none;
+}
 #respond textarea {
 	margin: 0 1em 1em 0;
 	float: left;
@@ -189,9 +252,10 @@ Tags:
 }
 #respond .form-allowed-tags {
 	clear: both;
+	width: 80%;
 }
-#respond .form-allowed-tags dd {
-	margin: 0;
+#respond .form-allowed-tags code {
+	display: block;
 }
 
 
@@ -209,12 +273,11 @@ Tags:
 	list-style: disc;
 	padding: 0 0 0 1em;
 }
-
-.widget-area .widget_search label {
-	display: none;
+.widget-area .widget_search {
+	overflow: hidden;
 }
-.widget-area .widget_search input#s {
-	width: 60%;
+.widget-area .widget_search input {
+	float: left;
 }
 
 
