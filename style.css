@@ -117,6 +117,9 @@ Tags:
 	background: #333;
 	color: #fff;
 }
+#access ul ul a:hover {
+	background: #000;
+}
 #access ul li:hover > ul {
 	display:block;
 }

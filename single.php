@@ -28,28 +28,28 @@
 					</div><!-- .entry-meta -->
 
 					<div class="entry-content">
-						<?php the_content(); ?>
-						<?php wp_link_pages( array( 'before' => '<div class="page-link">' . __( 'Pages:', 'theme' ), 'after' => '</div>' ) ); ?>
+	<?php the_content(); ?>
+	<?php wp_link_pages( array( 'before' => '<div class="page-link">' . __( 'Pages:', 'theme' ), 'after' => '</div>' ) ); ?>
 					</div><!-- .entry-content -->
 
 					<div class="entry-utility">
-					<?php
-						$tag_list = get_the_tag_list('', ', ');
-						if ( '' != $tag_list ) {
-							$utility_text = __( 'This entry was posted in %1$s and tagged %2$s. Bookmark the <a href="%3$s" title="Permalink to %4$s" rel="bookmark">permalink</a>.', 'theme' );
-						} else {
-							$utility_text = __( 'This entry was posted in %1$s. Bookmark the <a href="%3$s" title="Permalink to %4$s" rel="bookmark">permalink</a>.', 'theme' );
-						}
-						printf(
-							$utility_text,
-							get_the_category_list( ', ' ),
-							$tag_list,
-							get_permalink(),
-							the_title_attribute( 'echo=0' )
-						);
-					?>
+	<?php
+		$tag_list = get_the_tag_list('', ', ');
+		if ( '' != $tag_list ) {
+			$utility_text = __( 'This entry was posted in %1$s and tagged %2$s. Bookmark the <a href="%3$s" title="Permalink to %4$s" rel="bookmark">permalink</a>.', 'theme' );
+		} else {
+			$utility_text = __( 'This entry was posted in %1$s. Bookmark the <a href="%3$s" title="Permalink to %4$s" rel="bookmark">permalink</a>.', 'theme' );
+		}
+		printf(
+			$utility_text,
+			get_the_category_list( ', ' ),
+			$tag_list,
+			get_permalink(),
+			the_title_attribute( 'echo=0' )
+		);
+	?>
 
-<?php edit_post_link( __( 'Edit', 'theme' ), '<span class="edit-link">', '</span>' ); ?>
+						<?php edit_post_link( __( 'Edit', 'theme' ), '<span class="edit-link">', '</span>' ); ?>
 					</div><!-- .entry-utility -->
 				</div><!-- #post-<?php the_ID(); ?> -->
 
