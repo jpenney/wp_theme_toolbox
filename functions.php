@@ -65,29 +65,5 @@ function toolbox_widgets_init() {
 		'before_title' => '<h3 class="widget-title">',
 		'after_title' => '</h3>',
 	) );
-	
-	$current_theme = get_option( 'template' ); // variable stores the current theme
-	$target_theme = 'toolbox'; // variable stores the theme we want to target
-
-	global $pagenow;
-
-	if ( 'themes.php' == $pagenow ) {
-		if ( isset( $_GET['activated'] ) && $current_theme == $target_theme ) {
-		
-			// Setup some instances of the default widgets:
-			update_option( 'widget_search', array( 2 => array( 'title' => '' ), '_multiwidget' => 1 ) );
-			update_option( 'widget_archives', array( 2 => array( 'title' => '', 'count' => 0, 'dropdown' => 0 ), '_multiwidget' => 1 ) );
-			update_option( 'widget_meta', array( 2 => array( 'title' => '' ), '_multiwidget' => 1 ) );
-
-			// Update the sidebars with those widgets
-			update_option( 'sidebars_widgets', array(
-				'primary-widget-area' => array(
-					'search-2',
-					'archives-2',
-					'meta-2',
-				),
-			));
-		}
-	}	
 }
 add_action( 'init', 'toolbox_widgets_init' );
