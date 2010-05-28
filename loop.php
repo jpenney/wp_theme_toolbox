@@ -16,41 +16,43 @@
 <?php /* Start the Loop */ ?>
 <?php while ( have_posts() ) : the_post(); ?>
 
-		<div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-			<h2 class="entry-title"><a href="<?php the_permalink(); ?>" title="<?php printf( esc_attr__( 'Permalink to %s', 'theme' ), the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark"><?php the_title(); ?></a></h2>
+		<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+			<header class="entry-header">
+				<h1 class="entry-title"><a href="<?php the_permalink(); ?>" title="<?php printf( esc_attr__( 'Permalink to %s', 'theme' ), the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark"><?php the_title(); ?></a></h1>
 
-			<div class="entry-meta">
-				<?php
-					printf( __( '<span class="meta-prep meta-prep-author">Posted on </span><a href="%1$s" title="%2$s" rel="bookmark"><span class="entry-date">%3$s</span></a> <span class="meta-sep"> by </span> <span class="author vcard"><a class="url fn n" href="%4$s" title="%5$s">%6$s</a></span>', 'theme' ),
-						get_permalink(),
-						esc_attr( get_the_time() ),
-						get_the_date(),
-						get_author_posts_url( get_the_author_meta( 'ID' ) ),
-						sprintf( esc_attr__( 'View all posts by %s', 'theme' ), get_the_author() ),
-						get_the_author()
-					);
-				?>
-			</div><!-- .entry-meta -->
+				<div class="entry-meta">
+					<?php
+						printf( __( '<span class="meta-prep meta-prep-author">Posted on </span><a href="%1$s" rel="bookmark"><time class="entry-date" datetime="%2$s" pubdate>%3$s</time></a> <span class="meta-sep"> by </span> <span class="author vcard"><a class="url fn n" href="%4$s" title="%5$s">%6$s</a></span>', 'theme' ),
+							get_permalink(),
+							get_the_date( 'c' ),
+							get_the_date(),
+							get_author_posts_url( get_the_author_meta( 'ID' ) ),
+							sprintf( esc_attr__( 'View all posts by %s', 'theme' ), get_the_author() ),
+							get_the_author()
+						);
+					?>
+				</div><!-- .entry-meta -->
+			</header><!-- .entry-header -->
 
 	<?php if ( is_archive() || is_search() ) : // Only display Excerpts for archives & search ?>
-			<div class="entry-summary">
+			<section class="entry-summary">
 				<?php the_excerpt( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'theme' ) ); ?>
-			</div><!-- .entry-summary -->
+			</section><!-- .entry-summary -->
 	<?php else : ?>
-			<div class="entry-content">
+			<section class="entry-content">
 				<?php the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'theme' ) ); ?>
 				<?php wp_link_pages( array( 'before' => '<div class="page-link">' . __( 'Pages:', 'theme' ), 'after' => '</div>' ) ); ?>
-			</div><!-- .entry-content -->
+			</section><!-- .entry-content -->
 	<?php endif; ?>
 
-			<div class="entry-utility">
+			<footer class="entry-utility">
 				<span class="cat-links"><span class="entry-utility-prep entry-utility-prep-cat-links"><?php _e( 'Posted in ', 'theme' ); ?></span><?php the_category( ', ' ); ?></span>
 				<span class="meta-sep"> | </span>
 				<?php the_tags( '<span class="tag-links"><span class="entry-utility-prep entry-utility-prep-tag-links">' . __( 'Tagged ', 'theme' ) . '</span>', ', ', '<span class="meta-sep"> | </span>' ); ?>
 				<span class="comments-link"><?php comments_popup_link( __( 'Leave a comment', 'theme' ), __( '1 Comment', 'theme' ), __( '% Comments', 'theme' ) ); ?></span>
 				<?php edit_post_link( __( 'Edit', 'theme' ), '<span class="meta-sep">|</span> <span class="edit-link">', '</span>' ); ?>
-			</div><!-- #entry-utility -->
-		</div><!-- #post-<?php the_ID(); ?> -->
+			</footer><!-- #entry-utility -->
+		</article><!-- #post-<?php the_ID(); ?> -->
 
 		<?php comments_template( '', true ); ?>
 
