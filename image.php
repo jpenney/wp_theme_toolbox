@@ -7,33 +7,36 @@
 
 <?php get_header(); ?>
 
-		<div id="container">
-			<div id="content" class="image-attachment">
+		<div id="container" class="image-attachment">
+			<div id="content">
 
 <?php the_post(); ?>
 
 				<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+					<header class="entry-header">
+						<h2 class="entry-title"><?php the_title(); ?></h2>
 
-					<div class="entry-meta">
-						<?php
-							$metadata = wp_get_attachment_metadata();
-							printf( __( '<span class="meta-prep meta-prep-entry-date">Published </span> <span class="entry-date"><abbr class="published" title="%1$s">%2$s</abbr></span>  at <a href="%3$s" title="Link to full-size image">%4$s &times; %5$s</a> in <a href="%6$s" title="Return to %7$s" rel="gallery">%7$s</a>', 'theme'),
-								esc_attr( get_the_time() ),
-								get_the_date(),
-								wp_get_attachment_url(),
-								$metadata['width'],
-								$metadata['height'],
-								get_permalink( $post->post_parent ),
-								get_the_title( $post->post_parent )
-							);
-						?>
-						<?php edit_post_link( __( 'Edit', 'theme' ), '<span class="meta-sep">|</span> <span class="edit-link">', '</span>' ); ?>
-					</div><!-- .entry-meta -->
+						<div class="entry-meta">
+							<?php
+								$metadata = wp_get_attachment_metadata();
+								printf( __( '<span class="meta-prep meta-prep-entry-date">Published </span> <span class="entry-date"><abbr class="published" title="%1$s">%2$s</abbr></span>  at <a href="%3$s" title="Link to full-size image">%4$s &times; %5$s</a> in <a href="%6$s" title="Return to %7$s" rel="gallery">%7$s</a>', 'theme'),
+									esc_attr( get_the_time() ),
+									get_the_date(),
+									wp_get_attachment_url(),
+									$metadata['width'],
+									$metadata['height'],
+									get_permalink( $post->post_parent ),
+									get_the_title( $post->post_parent )
+								);
+							?>
+							<?php edit_post_link( __( 'Edit', 'theme' ), '<span class="meta-sep">|</span> <span class="edit-link">', '</span>' ); ?>
+						</div><!-- .entry-meta -->
 
-					<div class="image-navigation">
-						<span class="previous-image"><?php previous_image_link( false, __( '&larr; Previous' , 'theme' ) ); ?></span>
-						<span class="next-image"><?php next_image_link( false, __( 'Next &rarr;' , 'theme' ) ); ?></span>
-					</div><!-- .image-navigation -->
+						<div class="image-navigation">
+							<span class="previous-image"><?php previous_image_link( false, __( '&larr; Previous' , 'theme' ) ); ?></span>
+							<span class="next-image"><?php next_image_link( false, __( 'Next &rarr;' , 'theme' ) ); ?></span>
+						</div><!-- .image-navigation -->
+					</header><!-- .entry-header -->
 
 					<div class="entry-content">
 
@@ -59,19 +62,17 @@
 								$attachment_size = apply_filters( 'theme_attachment_size',  800 );
 								echo wp_get_attachment_image( $post->ID, array( $attachment_size, 9999 ) ); // filterable image width with, essentially, no limit for image height.
 								?></a>
+							</div><!-- .attachment -->
+
+							<?php if ( ! empty( $post->post_excerpt ) ) : ?>
+							<div class="entry-caption">
+								<?php the_excerpt(); ?>
 							</div>
-						</div>
+							<?php endif; ?>
+						</div><!-- .entry-attachment -->
 
-						<?php if ( ! empty( $post->post_excerpt ) ) : ?>
-						<div class="entry-caption">
-							<?php the_excerpt(); ?>
-						</div>
-						<?php endif; ?>
-
-						<h2 class="entry-title"><?php the_title(); ?></h2>
-
-<?php the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'theme' )  ); ?>
-<?php wp_link_pages( array( 'before' => '<div class="page-link">' . __( 'Pages:', 'theme' ), 'after' => '</div>' ) ); ?>
+	<?php the_content( ); ?>
+	<?php wp_link_pages( array( 'before' => '<div class="page-link">' . __( 'Pages:', 'theme' ), 'after' => '</div>' ) ); ?>
 
 					</div><!-- .entry-content -->
 

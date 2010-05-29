@@ -30,7 +30,8 @@ Tags:
 
 /* Increase the size of the content area for templates without sidebars  */
 
-#main .image-attachment,
+.full-width #content,
+.image-attachment #content,
 .error404 #content {
 	margin: 0;
 }
@@ -176,6 +177,7 @@ Tags:
 .image-attachment .entry-content .entry-attachment {
 	background: #EEE;
 	padding: 1em;
+	text-align: center;
 }
 .image-attachment .entry-content .attachment {
 	display: block;
