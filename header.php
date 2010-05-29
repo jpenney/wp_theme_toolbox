@@ -32,20 +32,22 @@
 	<link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
 	<?php if ( is_singular() && get_option('thread_comments') ) wp_enqueue_script( 'comment-reply' ); ?>
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
+	
 	<?php wp_head(); ?>
 </head>
 
 <body <?php body_class(); ?>>
 <div id="wrapper" class="hfeed">
-	<div id="header">
+	<header id="branding">
 			<h1 id="site-title"><span><a href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></span></h1>
 			
 			<div id="site-description"><?php bloginfo( 'description' ); ?></div>
-
-			<div id="access">
-				<div class="skip-link screen-reader-text"><a href="#content" title="<?php esc_attr_e( 'Skip to content', 'theme' ); ?>"><?php _e( 'Skip to content', 'theme' ); ?></a></div>
-				<?php wp_nav_menu( array( 'sort_column' => 'menu_order', 'theme_location' => 'primary' ) ); ?>
-			</div><!-- #access -->
-	</div><!-- #header -->
-
+	</header><!-- #branding -->
+	
+	<nav id="access">
+		<div class="skip-link screen-reader-text"><a href="#content" title="<?php esc_attr_e( 'Skip to content', 'theme' ); ?>"><?php _e( 'Skip to content', 'theme' ); ?></a></div>
+		
+		<?php wp_nav_menu( array( 'sort_column' => 'menu_order', 'theme_location' => 'primary' ) ); ?>
+	</nav><!-- #access -->
+	
 	<div id="main">

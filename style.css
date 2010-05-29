@@ -23,8 +23,9 @@ Tags:
 	overflow: hidden;
 	width: 220px;
 }
-#footer {
+#colophon {
 	clear: both;
+	display: block;
 	width: 100%;
 }
 
@@ -289,7 +290,7 @@ textarea {
 /* =Footer
 -------------------------------------------------------------- */
 
-#footer {
+#colophon {
 	padding: 1em 0 0 0;
 }
 
