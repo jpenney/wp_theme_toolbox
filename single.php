@@ -12,27 +12,32 @@
 
 <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
 
-				<div id="nav-above" class="navigation">
-					<div class="nav-previous"><?php previous_post_link( '%link', '<span class="meta-nav">' . _x( '&larr;', 'Previous post link', 'theme' ) . '</span> %title' ); ?></div>
-					<div class="nav-next"><?php next_post_link( '%link', '%title <span class="meta-nav">' . _x( '&rarr;', 'Next post link', 'theme' ) . '</span>' ); ?></div>
-				</div><!-- #nav-above -->
+				<?php toolbox_navigation( 'nav-above' ); ?>
+				
+				<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+					<header class="entry-header">					
+						<h1 class="entry-title"><?php the_title(); ?></h1>
 
-				<div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-					<h1 class="entry-title"><?php the_title(); ?></h1>
-
-					<div class="entry-meta">
-						<span class="meta-prep meta-prep-author"><?php _e( 'Posted on ', 'theme' ); ?></span>
-						<a href="<?php the_permalink(); ?>" title="<?php the_time(); ?>" rel="bookmark"><span class="entry-date"><?php echo get_the_date(); ?></span></a>
-						<span class="meta-sep"><?php _e( ' by ', 'theme' ); ?></span>
-						<span class="author vcard"><a class="url fn n" href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ) ); ?>" title="<?php printf( esc_attr__( 'View all posts by %s', 'theme' ), get_the_author() ); ?>"><?php the_author(); ?></a></span>
-					</div><!-- .entry-meta -->
+						<div class="entry-meta">
+							<?php
+								printf( __( '<span class="meta-prep meta-prep-author">Posted on </span><a href="%1$s" rel="bookmark"><time class="entry-date" datetime="%2$s" pubdate>%3$s</time></a> <span class="meta-sep"> by </span> <span class="author vcard"><a class="url fn n" href="%4$s" title="%5$s">%6$s</a></span>', 'theme' ),
+									get_permalink(),
+									get_the_date( 'c' ),
+									get_the_date(),
+									get_author_posts_url( get_the_author_meta( 'ID' ) ),
+									sprintf( esc_attr__( 'View all posts by %s', 'theme' ), get_the_author() ),
+									get_the_author()
+								);
+							?>
+						</div><!-- .entry-meta -->
+					</header><!-- .entry-header -->
 
 					<div class="entry-content">
 	<?php the_content(); ?>
 	<?php wp_link_pages( array( 'before' => '<div class="page-link">' . __( 'Pages:', 'theme' ), 'after' => '</div>' ) ); ?>
 					</div><!-- .entry-content -->
 
-					<div class="entry-utility">
+					<footer class="entry-meta">
 	<?php
 		$tag_list = get_the_tag_list('', ', ');
 		if ( '' != $tag_list ) {
@@ -50,13 +55,10 @@
 	?>
 
 						<?php edit_post_link( __( 'Edit', 'theme' ), '<span class="edit-link">', '</span>' ); ?>
-					</div><!-- .entry-utility -->
-				</div><!-- #post-<?php the_ID(); ?> -->
+					</footer><!-- .entry-meta -->
+				</article><!-- #post-<?php the_ID(); ?> -->
 
-				<div id="nav-below" class="navigation">
-					<div class="nav-previous"><?php previous_post_link( '%link', '<span class="meta-nav">' . _x( '&larr;', 'Previous post link', 'theme' ) . '</span> %title' ); ?></div>
-					<div class="nav-next"><?php next_post_link( '%link', '%title <span class="meta-nav">' . _x( '&rarr;', 'Next post link', 'theme' ) . '</span>' ); ?></div>
-				</div><!-- #nav-below -->
+				<?php toolbox_navigation( 'nav-below' ); ?>
 
 				<?php comments_template( '', true ); ?>
 

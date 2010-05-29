@@ -1,24 +1,33 @@
+<?php
+/**
+ * @package WordPress
+ * @subpackage Toolbox
+ */
+?>
 
 <?php
 /*
-Template Name: One column, no sidebar
-Description: A template with no sidebar
+Template Name: Full-width, no sidebar
+Description: A full-width template with no sidebar
 */
 get_header(); ?>
 
-		<div id="container" class="onecolumn">
+		<div id="container" class="full-width">
 			<div id="content">
 
 <?php the_post(); ?>
 
-				<div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-					<h1 class="entry-title"><?php the_title(); ?></h1>
+				<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+					<header class="entry-header">
+						<h1 class="entry-title"><?php the_title(); ?></h1>
+					</header><!-- .entry-header -->
+					
 					<div class="entry-content">
 						<?php the_content(); ?>
 						<?php wp_link_pages( 'before=<div class="page-link">' . __( 'Pages:', 'theme' ) . '&after=</div>'); ?>
 						<?php edit_post_link( __( 'Edit', 'theme' ), '<span class="edit-link">', '</span>' ); ?>
 					</div><!-- .entry-content -->
-				</div><!-- #post-<?php the_ID(); ?> -->
+				</article><!-- #post-<?php the_ID(); ?> -->
 
 				<?php comments_template( '', true ); ?>
 

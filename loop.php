@@ -35,23 +35,23 @@
 			</header><!-- .entry-header -->
 
 	<?php if ( is_archive() || is_search() ) : // Only display Excerpts for archives & search ?>
-			<section class="entry-summary">
+			<div class="entry-summary">
 				<?php the_excerpt( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'theme' ) ); ?>
-			</section><!-- .entry-summary -->
+			</div><!-- .entry-summary -->
 	<?php else : ?>
-			<section class="entry-content">
+			<div class="entry-content">
 				<?php the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'theme' ) ); ?>
 				<?php wp_link_pages( array( 'before' => '<div class="page-link">' . __( 'Pages:', 'theme' ), 'after' => '</div>' ) ); ?>
-			</section><!-- .entry-content -->
+			</div><!-- .entry-content -->
 	<?php endif; ?>
 
-			<footer class="entry-utility">
+			<footer class="entry-meta">
 				<span class="cat-links"><span class="entry-utility-prep entry-utility-prep-cat-links"><?php _e( 'Posted in ', 'theme' ); ?></span><?php the_category( ', ' ); ?></span>
 				<span class="meta-sep"> | </span>
 				<?php the_tags( '<span class="tag-links"><span class="entry-utility-prep entry-utility-prep-tag-links">' . __( 'Tagged ', 'theme' ) . '</span>', ', ', '<span class="meta-sep"> | </span>' ); ?>
 				<span class="comments-link"><?php comments_popup_link( __( 'Leave a comment', 'theme' ), __( '1 Comment', 'theme' ), __( '% Comments', 'theme' ) ); ?></span>
 				<?php edit_post_link( __( 'Edit', 'theme' ), '<span class="meta-sep">|</span> <span class="edit-link">', '</span>' ); ?>
-			</footer><!-- #entry-utility -->
+			</footer><!-- #entry-meta -->
 		</article><!-- #post-<?php the_ID(); ?> -->
 
 		<?php comments_template( '', true ); ?>

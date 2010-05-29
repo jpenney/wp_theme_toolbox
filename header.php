@@ -38,13 +38,9 @@
 <body <?php body_class(); ?>>
 <div id="wrapper" class="hfeed">
 	<div id="header">
-				<?php if ( is_home() || is_front_page() ) { ?>
-					<h1 id="site-title"><span><a href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></span></h1>
-				<?php } else { ?>
-					<div id="site-title"><span><a href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></span></div>
-				<?php } ?>
-				
-				<div id="site-description"><?php bloginfo( 'description' ); ?></div>
+			<h1 id="site-title"><span><a href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></span></h1>
+			
+			<div id="site-description"><?php bloginfo( 'description' ); ?></div>
 
 			<div id="access">
 				<div class="skip-link screen-reader-text"><a href="#content" title="<?php esc_attr_e( 'Skip to content', 'theme' ); ?>"><?php _e( 'Skip to content', 'theme' ); ?></a></div>

@@ -54,6 +54,29 @@ function toolbox_page_menu_args($args) {
 add_filter( 'wp_page_menu_args', 'toolbox_page_menu_args' );
 
 /**
+ * Generates post navigation so we don't keep repeating ourselves
+ *
+ * Used in loop.php and single.php
+ */
+function toolbox_navigation( $id ) {
+	if ( is_single() ) { ?>
+
+<div id="<?php echo $id; ?>" class="navigation">
+	<div class="nav-previous"><?php previous_post_link( '%link', '<span class="meta-nav">' . _x( '&larr;', 'Previous post link', 'theme' ) . '</span> %title' ); ?></div>
+	<div class="nav-next"><?php next_post_link( '%link', '%title <span class="meta-nav">' . _x( '&rarr;', 'Next post link', 'theme' ) . '</span>' ); ?></div>
+</div><!-- #<?php echo $id; ?> -->
+		
+	<?php } elseif ( $wp_query->max_num_pages > 1 ) { ?>
+
+	<div id="<?php echo $id; ?>" class="navigation">
+		<div class="nav-previous"><?php next_posts_link( __( '<span class="meta-nav">&larr;</span> Older posts', 'theme' ) ); ?></div>
+		<div class="nav-next"><?php previous_posts_link( __( 'Newer posts <span class="meta-nav">&rarr;</span>', 'theme' ) ); ?></div>
+	</div><!-- #<?php echo $id; ?> -->
+		
+	<?php }
+}
+
+/**
  * Register widgetized area and update sidebar with default widgets
  */
 function toolbox_widgets_init() {

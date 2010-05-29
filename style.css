@@ -163,7 +163,7 @@ Tags:
 
 /* Image Attachments */
 
-.image-attachment .entry-meta {
+.image-attachment div.entry-meta {
 	float: left;
 }
 .image-attachment .image-navigation {

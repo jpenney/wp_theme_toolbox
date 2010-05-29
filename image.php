@@ -12,7 +12,7 @@
 
 <?php the_post(); ?>
 
-				<div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+				<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
 					<div class="entry-meta">
 						<?php
@@ -87,7 +87,7 @@
 <?php endif; ?>
 <?php edit_post_link( __( 'Edit', 'theme' ), ' <span class="edit-link">', '</span>' ); ?>
 					</div><!-- .entry-utility -->
-				</div><!-- #post-<?php the_ID(); ?> -->
+				</article><!-- #post-<?php the_ID(); ?> -->
 
 <?php comments_template(); ?>
 

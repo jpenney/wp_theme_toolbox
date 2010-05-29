@@ -10,8 +10,11 @@
 	<div id="container">
 		<div id="content">
 
-			<div id="post-0" class="post error404 not-found">
-				<h1 class="entry-title"><?php _e( 'This is somewhat embarrassing, isn&rsquo;t it?', 'theme' ); ?></h1>
+			<article id="post-0" class="post error404 not-found">
+				<header class="entry-header">
+					<h1 class="entry-title"><?php _e( 'This is somewhat embarrassing, isn&rsquo;t it?', 'theme' ); ?></h1>
+				</header>
+				
 				<div class="entry-content">
 					<p><?php _e( 'It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching, or one of the links below, can help.', 'theme' ); ?></p>
 
@@ -34,7 +37,7 @@
 					<?php the_widget( 'WP_Widget_Tag_Cloud' ); ?>
 
 				</div><!-- .entry-content -->
-			</div><!-- #post-0 -->
+			</article><!-- #post-0 -->
 
 		</div><!-- #content -->
 	</div><!-- #container -->
