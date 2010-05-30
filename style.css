@@ -52,12 +52,6 @@ Use it to make something cool, have fun, and share what you've learned with othe
 	left: -9000em;
 }
 
-/* Class for labelling required form items */
-
-.required {
-	color: #CC0033;
-}
-
 
 /* =Header
 -------------------------------------------------------------- */
@@ -138,6 +132,29 @@ Use it to make something cool, have fun, and share what you've learned with othe
 /* =Content
 -------------------------------------------------------------- */
 
+#content nav {
+	display: block;
+	overflow: hidden;
+}
+#content nav .nav-previous {
+	float: left;
+	width: 50%;
+}
+#content nav .nav-next {
+	float: right;
+	text-align: right;
+	width: 50%;
+}
+#content #nav-above {
+	display: none;
+}
+.paged #content #nav-above,
+.single #content #nav-above {
+	display: block;
+}
+#nav-below {
+	margin: 1em 0 0 0;
+}
 .entry-title {
 	font-size: 1.5em;
 	margin: .83em 0;
@@ -176,7 +193,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
 .image-attachment div.entry-meta {
 	float: left;
 }
-.image-attachment .image-navigation {
+.image-attachment nav {
 	float: right;
 	margin: 0 0 1em 0;
 }
@@ -220,31 +237,10 @@ textarea {
 	width: 80%;
 }
 
+/* Class for labelling required form items */
 
-/* =Navigation
--------------------------------------------------------------- */
-
-.navigation {
-	overflow: hidden;
-}
-.navigation .nav-previous {
-	float: left;
-	width: 50%;
-}
-.navigation .nav-next {
-	float: right;
-	text-align: right;
-	width: 50%;
-}
-#nav-above {
-	display: none;
-}
-.paged #nav-above,
-.single #nav-above {
-	display: block;
-}
-#nav-below {
-	margin: 1em 0 0 0;
+.required {
+	color: #CC0033;
 }
 
 

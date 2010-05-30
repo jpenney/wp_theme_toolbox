@@ -32,10 +32,10 @@
 							<?php edit_post_link( __( 'Edit', 'theme' ), '<span class="meta-sep">|</span> <span class="edit-link">', '</span>' ); ?>
 						</div><!-- .entry-meta -->
 
-						<div class="image-navigation">
+						<nav id="image-navigation">
 							<span class="previous-image"><?php previous_image_link( false, __( '&larr; Previous' , 'theme' ) ); ?></span>
 							<span class="next-image"><?php next_image_link( false, __( 'Next &rarr;' , 'theme' ) ); ?></span>
-						</div><!-- .image-navigation -->
+						</nav><!-- #image-navigation -->
 					</header><!-- .entry-header -->
 
 					<div class="entry-content">
