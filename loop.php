@@ -48,7 +48,7 @@
 			<footer class="entry-meta">
 				<span class="cat-links"><span class="entry-utility-prep entry-utility-prep-cat-links"><?php _e( 'Posted in ', 'theme' ); ?></span><?php the_category( ', ' ); ?></span>
 				<span class="meta-sep"> | </span>
-				<?php the_tags( '<span class="tag-links"><span class="entry-utility-prep entry-utility-prep-tag-links">' . __( 'Tagged ', 'theme' ) . '</span>', ', ', '<span class="meta-sep"> | </span>' ); ?>
+				<?php the_tags( '<span class="tag-links">' . __( 'Tagged ', 'theme' ) . '</span>', ', ', '<span class="meta-sep"> | </span>' ); ?>
 				<span class="comments-link"><?php comments_popup_link( __( 'Leave a comment', 'theme' ), __( '1 Comment', 'theme' ), __( '% Comments', 'theme' ) ); ?></span>
 				<?php edit_post_link( __( 'Edit', 'theme' ), '<span class="meta-sep">|</span> <span class="edit-link">', '</span>' ); ?>
 			</footer><!-- #entry-meta -->

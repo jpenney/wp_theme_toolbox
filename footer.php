@@ -16,7 +16,7 @@
 				<a href="http://wordpress.org/" title="<?php esc_attr_e( 'Semantic Personal Publishing Platform', 'theme' ); ?>" rel="generator"><?php printf( __( 'Proudly powered by %s.', 'theme' ), 'WordPress' ); ?></a>
 			</div>
 	</footer><!-- #colophon -->
-</div><!-- #wrapper -->
+</div><!-- #page -->
 
 <?php wp_footer(); ?>
 
