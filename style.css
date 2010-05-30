@@ -1,11 +1,18 @@
 /*
 Theme Name: Toolbox
-Theme URI: 
+Theme URI:
 Description: A handy little theme that helps you build bigger ones
 Author: The Automattic Theme Team
 Version: 0.2
-Tags: 
+Tags:
+.
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+.
 */
+
+/* =Structure
+-------------------------------------------------------------- */
 
 #page {
 	display: block;
@@ -133,7 +140,7 @@ Tags:
 
 .entry-title {
 	font-size: 1.5em;
-	margin: .83em 0;	
+	margin: .83em 0;
 }
 .page-link {
 	margin: 0 0 1em 0;
