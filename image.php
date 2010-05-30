@@ -7,7 +7,7 @@
 
 <?php get_header(); ?>
 
-		<div id="container" class="image-attachment">
+		<div id="primary" class="image-attachment">
 			<div id="content">
 
 <?php the_post(); ?>
@@ -93,6 +93,6 @@
 <?php comments_template(); ?>
 
 			</div><!-- #content -->
-		</div><!-- #container -->
+		</div><!-- #primary -->
 
 <?php get_footer(); ?>

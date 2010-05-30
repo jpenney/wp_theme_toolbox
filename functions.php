@@ -58,8 +58,8 @@ add_filter( 'wp_page_menu_args', 'toolbox_page_menu_args' );
  */
 function toolbox_widgets_init() {
 	register_sidebar( array (
-		'name' => __( 'Primary Widget Area', 'theme' ),
-		'id' => 'primary-widget-area',
+		'name' => __( 'Sidebar', 'theme' ),
+		'id' => 'sidebar',
 		'before_widget' => '<li id="%1$s" class="widget-container %2$s">',
 		'after_widget' => "</li>",
 		'before_title' => '<h2 class="widget-title">',

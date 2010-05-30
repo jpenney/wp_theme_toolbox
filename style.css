@@ -18,7 +18,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
 	display: block;
 	margin: 1em;
 }
-#container {
+#primary {
 	float: left;
 	margin: 0 -240px 0 0;
 	width: 100%;

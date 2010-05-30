@@ -50,4 +50,4 @@
 		<?php wp_nav_menu( array( 'sort_column' => 'menu_order', 'theme_location' => 'primary' ) ); ?>
 	</nav><!-- #access -->
 	
-	<div id="main">
+	<section id="main">

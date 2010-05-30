@@ -7,7 +7,7 @@
 
 <?php get_header(); ?>
 
-		<div id="container">
+		<div id="primary">
 			<div id="content">
 
 				<h1 class="page-title"><?php
@@ -18,7 +18,7 @@
 <?php get_template_part( 'loop', 'category' ); ?>
 
 			</div><!-- #content -->
-		</div><!-- #container -->
+		</div><!-- #primary -->
 
 <?php get_sidebar(); ?>
 <?php get_footer(); ?>

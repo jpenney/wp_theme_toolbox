@@ -7,7 +7,7 @@
 
 <?php get_header(); ?>
 
-	<div id="container">
+	<div id="primary">
 		<div id="content">
 
 			<article id="post-0" class="post error404 not-found">
@@ -40,7 +40,7 @@
 			</article><!-- #post-0 -->
 
 		</div><!-- #content -->
-	</div><!-- #container -->
+	</div><!-- #primary -->
 	<script type="text/javascript">
 		/* <![CDATA[ */
 		// focus on search field after it has loaded
