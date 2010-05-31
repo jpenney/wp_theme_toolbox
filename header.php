@@ -47,7 +47,7 @@
 	<nav id="access">
 		<div class="skip-link screen-reader-text"><a href="#content" title="<?php esc_attr_e( 'Skip to content', 'theme' ); ?>"><?php _e( 'Skip to content', 'theme' ); ?></a></div>
 		
-		<?php wp_nav_menu( array( 'sort_column' => 'menu_order', 'theme_location' => 'primary' ) ); ?>
+		<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
 	</nav><!-- #access -->
 	
 	<section id="main">
