@@ -26,7 +26,7 @@
 ?>
             </h2>
 
-<?php if ( get_comment_pages_count() > 1 ) : // are there comments to navigate through ?>
+<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // are there comments to navigate through ?>
 			<div class="navigation">
 				<div class="nav-previous"><?php previous_comments_link( __( '&larr; Older Comments', 'theme' ) ); ?></div>
 				<div class="nav-next"><?php next_comments_link( __( 'Newer Comments &rarr;', 'theme' ) ); ?></div>
@@ -37,7 +37,7 @@
 				<?php wp_list_comments( ); ?>
 			</ol>
 
-<?php if ( get_comment_pages_count() > 1 ) : // are there comments to navigate through ?>
+<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // are there comments to navigate through ?>
 			<div class="navigation">
 				<div class="nav-previous"><?php previous_comments_link( __( '&larr; Older Comments', 'theme' ) ); ?></div>
 				<div class="nav-next"><?php next_comments_link( __( 'Newer Comments &rarr;', 'theme' ) ); ?></div>
