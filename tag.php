@@ -14,9 +14,9 @@
 
 <?php the_post(); ?>
 
-				<h1 class="page-title"><?php
+				<h2 class="page-title"><?php
 					printf( __( 'Tag Archives: %s', 'theme' ), '<span>' . single_tag_title( '', false ) . '</span>' );
-				?></h1>
+				?></h2>
 
 <?php rewind_posts(); ?>
 
