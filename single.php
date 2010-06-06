@@ -13,6 +13,7 @@
 <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
 
 				<nav id="nav-above">
+					<h1 class="screen-reader-text"><?php _e( 'Post navigation', 'theme' ); ?></h1>		
 					<div class="nav-previous"><?php previous_post_link( '%link', '<span class="meta-nav">' . _x( '&larr;', 'Previous post link', 'theme' ) . '</span> %title' ); ?></div>
 					<div class="nav-next"><?php next_post_link( '%link', '%title <span class="meta-nav">' . _x( '&rarr;', 'Next post link', 'theme' ) . '</span>' ); ?></div>
 				</nav><!-- #nav-above -->
@@ -62,6 +63,7 @@
 				</article><!-- #post-<?php the_ID(); ?> -->
 
 				<nav id="nav-below">
+					<h1 class="screen-reader-text"><?php _e( 'Post navigation', 'theme' ); ?></h1>		
 					<div class="nav-previous"><?php previous_post_link( '%link', '<span class="meta-nav">' . _x( '&larr;', 'Previous post link', 'theme' ) . '</span> %title' ); ?></div>
 					<div class="nav-next"><?php next_post_link( '%link', '%title <span class="meta-nav">' . _x( '&rarr;', 'Next post link', 'theme' ) . '</span>' ); ?></div>
 				</nav><!-- #nav-below -->
