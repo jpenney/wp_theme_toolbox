@@ -11,16 +11,17 @@
 			<div id="content">
 
 <?php the_post(); ?>
-
+				<h2 class="page-title">
 <?php if ( is_day() ) : ?>
-				<h1 class="page-title"><?php printf( __( 'Daily Archives: <span>%s</span>', 'theme' ), get_the_date() ); ?></h1>
+				<?php printf( __( 'Daily Archives: <span>%s</span>', 'theme' ), get_the_date() ); ?>
 <?php elseif ( is_month() ) : ?>
-				<h1 class="page-title"><?php printf( __( 'Monthly Archives: <span>%s</span>', 'theme' ), get_the_date('F Y') ); ?></h1>
+				<?php printf( __( 'Monthly Archives: <span>%s</span>', 'theme' ), get_the_date('F Y') ); ?>
 <?php elseif ( is_year() ) : ?>
-				<h1 class="page-title"><?php printf( __( 'Yearly Archives: <span>%s</span>', 'theme' ), get_the_date('Y') ); ?></h1>
+				<?php printf( __( 'Yearly Archives: <span>%s</span>', 'theme' ), get_the_date('Y') ); ?>
 <?php else : ?>
-				<h1 class="page-title"><?php _e( 'Blog Archives', 'theme' ); ?></h1>
+				<?php _e( 'Blog Archives', 'theme' ); ?>
 <?php endif; ?>
+				</h2>
 
 <?php rewind_posts(); ?>
 
