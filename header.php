@@ -45,9 +45,10 @@
 	</header><!-- #branding -->
 	
 	<nav id="access">
+		<h1 class="screen-reader-text"><?php _e( 'Main menu', 'theme' ); ?></h1>
 		<div class="skip-link screen-reader-text"><a href="#content" title="<?php esc_attr_e( 'Skip to content', 'theme' ); ?>"><?php _e( 'Skip to content', 'theme' ); ?></a></div>
 		
 		<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
 	</nav><!-- #access -->
 	
-	<section id="main">
+	<div id="main">
