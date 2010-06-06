@@ -39,9 +39,11 @@
 <body <?php body_class(); ?>>
 <div id="page" class="hfeed">
 	<header id="branding">
-			<h1 id="site-title"><span><a href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></span></h1>
+			<hgroup>
+				<h1 id="site-title"><span><a href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></span></h1>
 			
-			<div id="site-description"><?php bloginfo( 'description' ); ?></div>
+				<h2 id="site-description"><?php bloginfo( 'description' ); ?></h2>
+			</hgroup>
 	</header><!-- #branding -->
 	
 	<nav id="access">
