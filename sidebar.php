@@ -4,7 +4,6 @@
  * @subpackage Toolbox
  */
 ?>
-
 		<div id="secondary" class="widget-area">
 			<ul class="xoxo">
 <?php if ( ! dynamic_sidebar( 'sidebar' ) ) : ?>

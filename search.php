@@ -3,9 +3,8 @@
  * @package WordPress
  * @subpackage Toolbox
  */
-?>
 
-<?php get_header(); ?>
+get_header(); ?>
 
 		<div id="primary">
 			<div id="content">
