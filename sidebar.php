@@ -15,7 +15,7 @@
 				<li id="archives" class="widget-container">
 					<h2 class="widget-title"><?php _e( 'Archives', 'themename' ); ?></h2>
 					<ul>
-						<?php wp_get_archives( 'type=monthly' ); ?>
+						<?php wp_get_archives( array( 'type' => 'monthly' ) ); ?>
 					</ul>
 				</li>
 
