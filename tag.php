@@ -14,12 +14,12 @@ get_header(); ?>
 <?php the_post(); ?>
 
 				<h2 class="page-title"><?php
-					printf( __( 'Tag Archives: %s', 'theme' ), '<span>' . single_tag_title( '', false ) . '</span>' );
+					printf( __( 'Tag Archives: %s', 'themename' ), '<span>' . single_tag_title( '', false ) . '</span>' );
 				?></h2>
 
 <?php rewind_posts(); ?>
 
-<?php get_template_part( 'loop', 'tag' ); ?>
+				<?php get_template_part( 'loop', 'tag' ); ?>
 
 			</div><!-- #content -->
 		</div><!-- #primary -->

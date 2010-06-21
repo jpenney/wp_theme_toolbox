@@ -9,7 +9,7 @@
 
 	<footer id="colophon">
 			<div id="site-generator">
-				<a href="http://wordpress.org/" title="<?php esc_attr_e( 'A Semantic Personal Publishing Platform', 'theme' ); ?>" rel="generator"><?php printf( __( 'Proudly powered by %s.', 'theme' ), 'WordPress' ); ?></a>
+				<a href="http://wordpress.org/" title="<?php esc_attr_e( 'A Semantic Personal Publishing Platform', 'themename' ); ?>" rel="generator"><?php printf( __( 'Proudly powered by %s.', 'themename' ), 'WordPress' ); ?></a>
 			</div>
 	</footer><!-- #colophon -->
 </div><!-- #page -->

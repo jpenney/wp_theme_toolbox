@@ -7,7 +7,7 @@
 
 			<div id="comments">
 <?php if ( post_password_required() ) : ?>
-				<div class="nopassword"><?php _e( 'This post is password protected. Enter the password to view any comments.', 'theme' ); ?></div>
+				<div class="nopassword"><?php _e( 'This post is password protected. Enter the password to view any comments.', 'themename' ); ?></div>
 			</div><!-- .comments -->
 <?php
 		return;
@@ -21,16 +21,16 @@
 <?php if ( have_comments() ) : ?>
 			<h2 id="comments-title">
 <?php
-    printf( _n( 'One Response to %2$s', '%1$s Responses to %2$s', get_comments_number(), 'theme' ),
+    printf( _n( 'One Response to %2$s', '%1$s Responses to %2$s', get_comments_number(), 'themename' ),
         number_format_i18n( get_comments_number() ), '<em>' . get_the_title() . '</em>' );
 ?>
             </h2>
 
 <?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // are there comments to navigate through ?>
 			<nav id="comment-nav-above">
-				<h1 class="screen-reader-text"><?php _e( 'Comment navigation', 'theme' ); ?></h1>		
-				<div class="nav-previous"><?php previous_comments_link( __( '&larr; Older Comments', 'theme' ) ); ?></div>
-				<div class="nav-next"><?php next_comments_link( __( 'Newer Comments &rarr;', 'theme' ) ); ?></div>
+				<h1 class="screen-reader-text"><?php _e( 'Comment navigation', 'themename' ); ?></h1>		
+				<div class="nav-previous"><?php previous_comments_link( __( '&larr; Older Comments', 'themename' ) ); ?></div>
+				<div class="nav-next"><?php next_comments_link( __( 'Newer Comments &rarr;', 'themename' ) ); ?></div>
 			</nav>
 <?php endif; // check for comment navigation ?>
 
@@ -40,9 +40,9 @@
 
 <?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // are there comments to navigate through ?>
 			<nav id="comment-nav-below">
-				<h1 class="screen-reader-text"><?php _e( 'Comment navigation', 'theme' ); ?></h1>		
-				<div class="nav-previous"><?php previous_comments_link( __( '&larr; Older Comments', 'theme' ) ); ?></div>
-				<div class="nav-next"><?php next_comments_link( __( 'Newer Comments &rarr;', 'theme' ) ); ?></div>
+				<h1 class="screen-reader-text"><?php _e( 'Comment navigation', 'themename' ); ?></h1>		
+				<div class="nav-previous"><?php previous_comments_link( __( '&larr; Older Comments', 'themename' ) ); ?></div>
+				<div class="nav-next"><?php next_comments_link( __( 'Newer Comments &rarr;', 'themename' ) ); ?></div>
 			</nav>
 <?php endif; // check for comment navigation ?>
 
@@ -52,7 +52,7 @@
 
 <?php else : // if comments are closed ?>
 
-		<p class="nocomments"><?php _e( 'Comments are closed.', 'theme' ); ?></p>
+		<p class="nocomments"><?php _e( 'Comments are closed.', 'themename' ); ?></p>
 
 <?php endif; ?>
 <?php endif; ?>
