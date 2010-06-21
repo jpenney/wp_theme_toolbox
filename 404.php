@@ -40,11 +40,5 @@ get_header(); ?>
 
 		</div><!-- #content -->
 	</div><!-- #primary -->
-	<script type="text/javascript">
-		/* <![CDATA[ */
-		// focus on search field after it has loaded
-		document.getElementById('s') && document.getElementById('s').focus();
-		/* ]]> */
-	</script>
 
 <?php get_footer(); ?>
