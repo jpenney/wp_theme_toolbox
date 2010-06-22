@@ -11,13 +11,13 @@ get_header(); ?>
 		<div id="primary">
 			<div id="content">
 
-<?php the_post(); ?>
+				<?php the_post(); ?>
 
 				<h2 class="page-title"><?php
 					printf( __( 'Tag Archives: %s', 'themename' ), '<span>' . single_tag_title( '', false ) . '</span>' );
 				?></h2>
 
-<?php rewind_posts(); ?>
+				<?php rewind_posts(); ?>
 
 				<?php get_template_part( 'loop', 'tag' ); ?>
 

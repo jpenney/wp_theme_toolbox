@@ -6,7 +6,7 @@
 ?>
 		<div id="secondary" class="widget-area">
 			<ul class="xoxo">
-<?php if ( ! dynamic_sidebar( 'sidebar' ) ) : ?>
+			<?php if ( ! dynamic_sidebar( 'sidebar' ) ) : ?>
 
 				<li id="search" class="widget-container widget_search">
 					<?php get_search_form(); ?>
@@ -28,6 +28,6 @@
 					</ul>
 				</li>
 
-<?php endif; // end sidebar widget area ?>
+			<?php endif; // end sidebar widget area ?>
 			</ul>
 		</div><!-- #secondary .widget-area -->

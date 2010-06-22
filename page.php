@@ -9,7 +9,7 @@ get_header(); ?>
 		<div id="primary">
 			<div id="content">
 
-<?php the_post(); ?>
+				<?php the_post(); ?>
 
 				<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 					<header class="entry-header">
@@ -23,7 +23,7 @@ get_header(); ?>
 					</div><!-- .entry-content -->
 				</article><!-- #post-<?php the_ID(); ?> -->
 
-	<?php comments_template( '', true ); ?>
+				<?php comments_template( '', true ); ?>
 
 			</div><!-- #content -->
 		</div><!-- #primary -->

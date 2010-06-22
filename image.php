@@ -9,7 +9,7 @@
 		<div id="primary" class="image-attachment">
 			<div id="content">
 
-<?php the_post(); ?>
+			<?php the_post(); ?>
 
 				<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 					<header class="entry-header">
@@ -84,16 +84,16 @@
 					</div><!-- .entry-content -->
 
 					<div class="entry-utility">
-<?php if ( comments_open() && pings_open() ) : // Comments and trackbacks open ?>
-						<?php printf( __( '<a class="comment-link" href="#respond" title="Post a comment">Post a comment</a> or leave a trackback: <a class="trackback-link" href="%s" title="Trackback URL for your post" rel="trackback">Trackback URL</a>.', 'themename' ), get_trackback_url() ); ?>
-<?php elseif ( ! comments_open() && pings_open() ) : // Only trackbacks open ?>
-						<?php printf( __( 'Comments are closed, but you can leave a trackback: <a class="trackback-link" href="%s" title="Trackback URL for your post" rel="trackback">Trackback URL</a>.', 'themename' ), get_trackback_url() ); ?>
-<?php elseif ( comments_open() && ! pings_open() ) : // Only comments open ?>
-						<?php _e( 'Trackbacks are closed, but you can <a class="comment-link" href="#respond" title="Post a comment">post a comment</a>.', 'themename' ); ?>
-<?php elseif ( ! comments_open() && ! pings_open() ) : // Comments and trackbacks closed ?>
-						<?php _e( 'Both comments and trackbacks are currently closed.', 'themename' ); ?>
-<?php endif; ?>
-<?php edit_post_link( __( 'Edit', 'themename' ), ' <span class="edit-link">', '</span>' ); ?>
+						<?php if ( comments_open() && pings_open() ) : // Comments and trackbacks open ?>
+							<?php printf( __( '<a class="comment-link" href="#respond" title="Post a comment">Post a comment</a> or leave a trackback: <a class="trackback-link" href="%s" title="Trackback URL for your post" rel="trackback">Trackback URL</a>.', 'themename' ), get_trackback_url() ); ?>
+						<?php elseif ( ! comments_open() && pings_open() ) : // Only trackbacks open ?>
+							<?php printf( __( 'Comments are closed, but you can leave a trackback: <a class="trackback-link" href="%s" title="Trackback URL for your post" rel="trackback">Trackback URL</a>.', 'themename' ), get_trackback_url() ); ?>
+						<?php elseif ( comments_open() && ! pings_open() ) : // Only comments open ?>
+							<?php _e( 'Trackbacks are closed, but you can <a class="comment-link" href="#respond" title="Post a comment">post a comment</a>.', 'themename' ); ?>
+						<?php elseif ( ! comments_open() && ! pings_open() ) : // Comments and trackbacks closed ?>
+							<?php _e( 'Both comments and trackbacks are currently closed.', 'themename' ); ?>
+						<?php endif; ?>
+						<?php edit_post_link( __( 'Edit', 'themename' ), ' <span class="edit-link">', '</span>' ); ?>
 					</div><!-- .entry-utility -->
 				</article><!-- #post-<?php the_ID(); ?> -->
 

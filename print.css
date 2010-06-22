@@ -3,7 +3,7 @@ This stylesheet reformats the theme for the printed page.
 */
 
 body {
-	background:none !important;
+	background: none !important;
 }
 #wrapper {
 	float: none !important;
@@ -66,7 +66,7 @@ body {
 	width: auto;
 }
 img#wpstats {
-	display:none
+	display: none;
 }
 #site-generator a {
 	padding: 0;

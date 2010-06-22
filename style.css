@@ -1,6 +1,6 @@
 /*
 Theme Name: Toolbox
-Description: A handy little theme that helps you build bigger ones
+Description: An ultra-minimal starter theme for WordPress featuring the latest in semantic HTML5 markup.
 Author: The Automattic Theme Team
 Author URI: http://themeshaper.com/
 Version: 0.3
@@ -37,7 +37,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
 	width: 100%;
 }
 
-/* Increase the size of the content area for templates without sidebars  */
+/* Increase the size of the content area for templates without sidebars */
 
 .full-width #content,
 .image-attachment #content,
@@ -74,7 +74,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
 #access {
 	background: #eee;
 	display: block;
-	float:left;
+	float: left;
 	margin: 0 auto 1em auto;
 	width: 100%;
 }
@@ -84,7 +84,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
 	padding-left: 0;
 }
 #access li {
-	float:left;
+	float: left;
 	position: relative;
 }
 #access a {
@@ -125,7 +125,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
 	background: #000;
 }
 #access ul li:hover > ul {
-	display:block;
+	display: block;
 }
 
 
@@ -270,7 +270,7 @@ textarea {
 -------------------------------------------------------------- */
 
 .widget-area {
-	background: pink;
+	background: rgb(255, 192, 203); /* pink */
 }
 .widget-area ul {
 	list-style: none;
@@ -293,4 +293,31 @@ textarea {
 
 #colophon {
 	padding: 1em 0 0 0;
+}
+
+/* =WordPress basics
+-------------------------------------------------------------- */
+.alignleft {
+	display: inline;
+	float: left;
+}
+.alignright {
+	display: inline;
+	float: right;
+}
+.aligncenter {
+	clear: both;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+.wp-caption {
+	padding: .5em;
+	text-align: center;
+}
+.wp-caption img {
+	margin: .25em;
+}
+.wp-caption .wp-caption-text {
+	margin: .5em;
 }
