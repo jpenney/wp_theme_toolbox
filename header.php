@@ -12,6 +12,9 @@
 <link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
 <?php if ( is_singular() && get_option( 'thread_comments' ) ) wp_enqueue_script( 'comment-reply' ); ?>
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
+<!--[if lte IE 8]>
+<script src="<?php bloginfo( 'template_directory' ); ?>/html5.js" type="text/javascript"></script>
+<![endif]-->
 
 <?php wp_head(); ?>
 </head>
