@@ -78,7 +78,7 @@
 							<?php endif; ?>
 						</div><!-- .entry-attachment -->
 
-						<?php the_content( ); ?>
+						<?php the_content(); ?>
 						<?php wp_link_pages( array( 'before' => '<div class="page-link">' . __( 'Pages:', 'themename' ), 'after' => '</div>' ) ); ?>
 
 					</div><!-- .entry-content -->
