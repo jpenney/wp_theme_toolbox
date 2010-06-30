@@ -8,7 +8,6 @@ Tags: translation-ready, microformats, rtl-language-support
 
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
-
 */
 
 /* =Structure
@@ -20,11 +19,11 @@ Use it to make something cool, have fun, and share what you've learned with othe
 }
 #primary {
 	float: left;
-	margin: 0 -240px 0 0;
+	margin: 0 -240px 0;
 	width: 100%;
 }
 #content {
-	margin: 0 280px 0 0;
+	margin: 0 280px 0;
 }
 #main .widget-area {
 	float: right;
@@ -38,7 +37,6 @@ Use it to make something cool, have fun, and share what you've learned with othe
 }
 
 /* Increase the size of the content area for templates without sidebars */
-
 .full-width #content,
 .image-attachment #content,
 .error404 #content {
@@ -46,7 +44,6 @@ Use it to make something cool, have fun, and share what you've learned with othe
 }
 
 /* Text meant only for screen readers */
-
 .screen-reader-text {
 	position: absolute;
 	left: -9000em;
@@ -64,7 +61,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
 #site-description {
 	font-size: 1em;
 	font-weight: normal;
-	margin: 0 0 1em 0;
+	margin: 0 0 1em;
 }
 
 
@@ -75,7 +72,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
 	background: #eee;
 	display: block;
 	float: left;
-	margin: 0 auto 1em auto;
+	margin: 0 auto 1em;
 	width: 100%;
 }
 #access ul {
@@ -94,14 +91,14 @@ Use it to make something cool, have fun, and share what you've learned with othe
 	text-decoration: none;
 }
 #access ul ul {
+	box-shadow: 0 3px 3px rgba(0,0,0,0.2);
+	-moz-box-shadow: 0 3px 3px rgba(0,0,0,0.2);
+	-webkit-box-shadow: 0 3px 3px rgba(0,0,0,0.2);
 	display: none;
+	float: left;
 	position: absolute;
 	top: 2em;
 	left: 0;
-	float: left;
-	-webkit-box-shadow: 0px 3px 3px rgba(0,0,0,0.2);
-	-moz-box-shadow: 0px 3px 3px rgba(0,0,0,0.2);
-	box-shadow: 0px 3px 3px rgba(0,0,0,0.2);
 	z-index: 99999;
 }
 #access ul ul ul {
@@ -111,10 +108,10 @@ Use it to make something cool, have fun, and share what you've learned with othe
 #access ul ul a {
 	background: #333;
 	color: #fff;
-	height: auto;
 	line-height: 1em;
 	padding: .5em .5em .5em 1em;
 	width: 10em;
+	height: auto;
 }
 #access li:hover > a,
 #access ul ul :hover > a {
@@ -153,14 +150,13 @@ Use it to make something cool, have fun, and share what you've learned with othe
 	display: block;
 }
 #nav-below {
-	margin: 1em 0 0 0;
+	margin: 1em 0 0;
 }
 .page-link {
-	margin: 0 0 1em 0;
+	margin: 0 0 1em;
 }
 
 /* 404 page */
-
 .error404 .widget {
 	float: left;
 	width: 33%;
@@ -176,16 +172,14 @@ Use it to make something cool, have fun, and share what you've learned with othe
 }
 
 /* Notices */
-
 .post .notice,
 .error404 #searchform {
-	background: #EEE;
+	background: #eee;
 	display: block;
 	padding: 1em;
 }
 
 /* Image Attachments */
-
 .image-attachment div.entry-meta {
 	float: left;
 }
@@ -197,7 +191,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
 	clear: both;
 }
 .image-attachment .entry-content .entry-attachment {
-	background: #EEE;
+	background: #eee;
 	padding: 1em;
 	text-align: center;
 }
@@ -227,7 +221,7 @@ a img {
 }
 input[type=text],
 input#s {
-	margin: 0 1em 0 0;
+	margin: 0 1em 0;
 	width: 60%;
 }
 textarea {
@@ -235,9 +229,8 @@ textarea {
 }
 
 /* Class for labelling required form items */
-
 .required {
-	color: #CC0033;
+	color: #cc0033;
 }
 
 
@@ -246,14 +239,14 @@ textarea {
 
 #respond input[type=text] {
 	float: left;
-	margin: 0 1em 0 0;
+	margin: 0 1em 0;
 	width: 60%;
 }
 #respond .comment-form-comment label {
 	display: none;
 }
 #respond textarea {
-	margin: 0 1em 1em 0;
+	margin: 0 1em 1em;
 	float: left;
 	width: 80%;
 }
@@ -270,7 +263,7 @@ textarea {
 -------------------------------------------------------------- */
 
 .widget-area {
-	background: rgb(255, 192, 203); /* pink */
+	background: #ffc0cb;
 }
 .widget-area ul {
 	list-style: none;
@@ -292,12 +285,13 @@ textarea {
 -------------------------------------------------------------- */
 
 #colophon {
-	padding: 1em 0 0 0;
+	padding: 1em 0 0;
 }
 
 
 /* =WordPress basics
 -------------------------------------------------------------- */
+
 .alignleft {
 	display: inline;
 	float: left;
