@@ -19,11 +19,11 @@ Use it to make something cool, have fun, and share what you've learned with othe
 }
 #primary {
 	float: left;
-	margin: 0 -240px 0;
+	margin: 0 -240px 0 0;
 	width: 100%;
 }
 #content {
-	margin: 0 280px 0;
+	margin: 0 280px 0 0;
 }
 #main .widget-area {
 	float: right;
@@ -47,6 +47,22 @@ Use it to make something cool, have fun, and share what you've learned with othe
 .screen-reader-text {
 	position: absolute;
 	left: -9000em;
+}
+
+/* Alignment */
+.alignleft {
+	display: inline;
+	float: left;
+}
+.alignright {
+	display: inline;
+	float: right;
+}
+.aligncenter {
+	clear: both;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 
@@ -192,6 +208,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
 }
 .image-attachment .entry-content .entry-attachment {
 	background: #eee;
+	margin: 0 0 1em;
 	padding: 1em;
 	text-align: center;
 }
@@ -208,6 +225,31 @@ Use it to make something cool, have fun, and share what you've learned with othe
 a img {
 	border: none;
 }
+p img {
+	margin-bottom: 0.5em; /* a small bottom margin prevents content floating under images */
+}
+#content img,
+.widget-area img {
+	max-width: 100%;
+	width: auto;
+	height: auto;
+}
+img.alignleft {
+	margin-right: 1em;
+}
+img.alignright {
+	margin-left: 1em;
+}
+.wp-caption {
+	padding: .5em;
+	text-align: center;
+}
+.wp-caption img {
+	margin: .25em;
+}
+.wp-caption .wp-caption-text {
+	margin: .5em;
+}
 
 
 /* =Forms
@@ -221,7 +263,7 @@ a img {
 }
 input[type=text],
 input#s {
-	margin: 0 1em 0;
+	margin: 0 1em 0 0;
 	width: 60%;
 }
 textarea {
@@ -239,14 +281,14 @@ textarea {
 
 #respond input[type=text] {
 	float: left;
-	margin: 0 1em 0;
+	margin: 0 1em 0 0;
 	width: 60%;
 }
 #respond .comment-form-comment label {
 	display: none;
 }
 #respond textarea {
-	margin: 0 1em 1em;
+	margin: 0 1em 1em 0;
 	float: left;
 	width: 80%;
 }
@@ -288,31 +330,3 @@ textarea {
 	padding: 1em 0 0;
 }
 
-
-/* =WordPress basics
--------------------------------------------------------------- */
-
-.alignleft {
-	display: inline;
-	float: left;
-}
-.alignright {
-	display: inline;
-	float: right;
-}
-.aligncenter {
-	clear: both;
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
-}
-.wp-caption {
-	padding: .5em;
-	text-align: center;
-}
-.wp-caption img {
-	margin: .25em;
-}
-.wp-caption .wp-caption-text {
-	margin: .5em;
-}
