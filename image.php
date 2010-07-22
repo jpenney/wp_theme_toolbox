@@ -3,8 +3,8 @@
  * @package WordPress
  * @subpackage Toolbox
  */
-?>
-<?php get_header(); ?>
+
+get_header(); ?>
 
 		<div id="primary" class="image-attachment">
 			<div id="content">
