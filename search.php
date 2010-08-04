@@ -6,12 +6,15 @@
 
 get_header(); ?>
 
-		<div id="primary">
+		<section id="primary">
 			<div id="content">
 
 			<?php if ( have_posts() ) : ?>
 
-				<h1 class="page-title"><?php printf( __( 'Search Results for: %s', 'themename' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
+				<header class="page-header">
+					<h1 class="page-title"><?php printf( __( 'Search Results for: %s', 'themename' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
+				</header>
+
 				<?php get_template_part( 'loop', 'search' ); ?>
 
 			<?php else : ?>
@@ -30,7 +33,7 @@ get_header(); ?>
 			<?php endif; ?>
 
 			</div><!-- #content -->
-		</div><!-- #primary -->
+		</section><!-- #primary -->
 
 <?php get_sidebar(); ?>
 <?php get_footer(); ?>
