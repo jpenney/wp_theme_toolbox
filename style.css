@@ -45,7 +45,8 @@ Use it to make something cool, have fun, and share what you've learned with othe
 }
 
 /* Text meant only for screen readers */
-.screen-reader-text {
+.screen-reader-text,
+.section-heading {
 	position: absolute;
 	left: -9000em;
 }
