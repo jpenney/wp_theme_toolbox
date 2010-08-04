@@ -4,8 +4,8 @@ Theme URI: http://themeshaper.com/toolbox-html5-starter-theme/
 Author: The Automattic Theme Team
 Author URI: http://automattic.com/
 Description: An ultra-minimal HTML5 starter theme.
-Version: 0.3
-Tags: translation-ready, microformats, rtl-language-support
+Version: 0.4
+Tags: custom-menu, threaded-comments, sticky-post, microformats, rtl-language-support, translation-ready
 
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
@@ -280,6 +280,9 @@ textarea {
 /* =Comments
 -------------------------------------------------------------- */
 
+article.comment {
+	display: block;
+}
 #respond input[type=text] {
 	float: left;
 	margin: 0 1em 0 0;
