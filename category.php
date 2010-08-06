@@ -13,9 +13,9 @@ get_header(); ?>
 					<h1 class="page-title"><?php
 						printf( __( 'Category Archives: %s', 'themename' ), '<span>' . single_cat_title( '', false ) . '</span>' );
 					?></h1>
-				</header>
 
-				<?php $categorydesc = category_description(); if ( ! empty( $categorydesc ) ) echo apply_filters( 'archive_meta', '<div class="archive-meta">' . $categorydesc . '</div>' ); ?>
+					<?php $categorydesc = category_description(); if ( ! empty( $categorydesc ) ) echo apply_filters( 'archive_meta', '<div class="archive-meta">' . $categorydesc . '</div>' ); ?>
+				</header>
 
 				<?php get_template_part( 'loop', 'category' ); ?>
 
